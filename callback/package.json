@@ -1,0 +1,10 @@
+{
+  "name": "pebble-strata-callback",
+  "description": "OAuth callback library for pebble-strata",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.3.4",
+    "oauth": "^0.9.14"
+  }
+}

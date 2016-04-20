@@ -1,0 +1,10 @@
+{
+    "name": "Strata",
+    "description": "Read an athlete's recent activities from Strava and send them to their Pebble's timeline.",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
