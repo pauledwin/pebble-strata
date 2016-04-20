@@ -1,15 +1,14 @@
-// define libraries you would need
-var oauth = require('oauth')
-var AWS = require('aws-sdk')
+'use strict';
 
-// define your OAuth-application credentials
-var twitterConsumerKey = 'xxxxxxxxxxxxxxxxxxxx'
-var twitterConsumerSecret = 'xxxxxxxxxxxxxxxxxxxx'
+var oauth = require('oauth');
+var AWS = require('aws-sdk');
+
+var credentials = require('credentials-secret');
 
 // ensure AWS is requesting the nearest region
 AWS.config.update({
-  region: 'eu-west-1'
-})
+    region: 'eu-west-1'
+});
 
 // predefine variables that will not change after creation
 // to minimize unnecessary load time
@@ -32,10 +31,10 @@ exports.handler = function (event, context) {
 
   // event will exists of
   /**
-   * event.oauth_token = used to be able to request an access token
-   * event.oauth_verifier = used to be able to request an access token
-   * event.token = token to identify current user
-   */
+  * event.oauth_token = used to be able to request an access token
+  * event.oauth_verifier = used to be able to request an access token
+  * event.token = token to identify current user
+  */
 
   // retrieve secret value connected to the session-token
   var db = new DBConnector() // this can be DynamoDB, Firebase, etc..
@@ -80,3 +79,4 @@ exports.handler = function (event, context) {
     }
   })
 }
+

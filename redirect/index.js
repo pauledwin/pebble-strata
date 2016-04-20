@@ -5,7 +5,7 @@ var oauth = require('oauth');
 var AWS = require('aws-sdk');
 var cuid = require('cuid');
 
-var credentials = require('credentials-hidden');
+var credentials = require('credentials-secret');
 
 // ensure AWS is requesting the nearest region
 AWS.config.update({
